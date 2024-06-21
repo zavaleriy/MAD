@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment"
+    android:background="#253334">
+
+    <RelativeLayout
+        android:layout_width="321dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hamburger"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="45.39dp"
+            android:layout_height="49dp"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="36.6dp"
+            android:layout_height="35dp"
+            android:background="@drawable/avatar_background"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="110dp"
+        >
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="С возвращением, User!"
+            android:textSize="26sp"
+            android:fontFamily="@font/alegreya_medium"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/howYouFeeling"
+            android:layout_below="@id/Welcome"
+            android:fontFamily="@font/alegreyasans_regular"
+            android:textSize="18sp"
+            android:textColor="#b3ffffff"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFeeling"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="215dp"
+        />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="366dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="322dp"
+        />
+
+</FrameLayout>

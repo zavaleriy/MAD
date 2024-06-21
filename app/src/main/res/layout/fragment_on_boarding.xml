@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".onBoarding">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="191dp"
+        android:layout_height="199dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="411dp"
+        >
+
+        <TextView
+            android:id="@+id/TextHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello"
+            android:fontFamily="@font/alegreya_regular"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="34sp"
+            />
+
+        <TextView
+            android:id="@+id/TextGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextHello"
+            android:fontFamily="@font/alegreyasans_medium"
+            android:text="@string/greeting"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:layout_gravity="bottom|center"
+        >
+
+    <Button
+        android:id="@+id/ButtonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:fontFamily="@font/alegreyasans_medium"
+        android:background="@drawable/button_1"
+        android:textSize="25sp"
+        />
+
+    <Button
+        android:id="@+id/ButtonReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/ButtonLogin"
+        android:text="@string/notexist"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/alegreyasans_medium"
+        android:textSize="18sp"
+        />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

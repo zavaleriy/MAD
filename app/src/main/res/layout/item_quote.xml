@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="339dp"
+    android:layout_height="170dp"
+    android:background="@drawable/quote_background"
+    android:orientation="vertical"
+    android:layout_marginBottom="26dp">
+
+    <TextView
+        android:id="@+id/textViewQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_medium"
+        android:textSize="25sp"
+        android:text="PLACEHOLDER"
+        android:textColor="#253334"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewQuoteDesc"
+            android:layout_width="170dp"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreyasans_medium"
+            android:textSize="14sp"
+            android:text="Чем скорее ты закончишь - тем скорее пойдешь поесть"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/imageViewQuote"
+            android:layout_width="166dp"
+            android:layout_height="111dp"
+            android:layout_gravity="end|center"
+            />
+
+        <Button
+            android:layout_width="138dp"
+            android:layout_height="39dp"
+            android:background="@drawable/about_button"
+            android:layout_gravity="bottom"
+            android:text="@string/about"
+            />
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

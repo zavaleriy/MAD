@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#253334"
+    tools:context=".LoginFragment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="43.41dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/signin"
+        android:fontFamily="@font/alegreya_medium"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <RelativeLayout
+        android:id="@+id/Fields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="62dp"
+        app:layout_constraintTop_toBottomOf="@id/TextSignIn">
+
+        <EditText
+            android:id="@+id/EditEmail"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:backgroundTint="#BEC2C2"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/alegreya_regular"
+            android:textColor="#BEC2C2"
+            android:textColorHint="#BEC2C2"
+             />
+
+        <EditText
+            android:id="@+id/EditPassword"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:padding="10dp"
+            android:backgroundTint="#BEC2C2"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:fontFamily="@font/alegreya_regular"
+            android:textColor="#BEC2C2"
+            android:textColorHint="#BEC2C2"
+            android:layout_below="@id/EditEmail" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/leaves"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Buttons"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/Fields"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/ButtonSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_1"
+            android:text="@string/signin"
+            android:fontFamily="@font/alegreyasans_medium"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/ButtonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@android:color/transparent"
+            android:text="@string/register"
+            android:fontFamily="@font/alegreyasans_regular"
+            android:layout_below="@id/ButtonSignIn"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/ButtonProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/button_1"
+            android:text="@string/profile"
+            android:fontFamily="@font/alegreyasans_medium"
+            android:textSize="25sp"
+            android:layout_below="@id/ButtonRegister"/>
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

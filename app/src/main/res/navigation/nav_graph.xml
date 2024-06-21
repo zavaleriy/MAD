@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mad.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main"/>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mad.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listenFragment"
+        android:name="com.example.mad.ListenFragment"
+        android:label="fragment_listen"
+        tools:layout="@layout/fragment_listen" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.mad.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_splashScreen_to_onBoarding"
+            app:destination="@id/onBoarding" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding"
+        android:name="com.example.mad.onBoarding"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoarding_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_onBoarding_to_regFragment"
+            app:destination="@id/regFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mad.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_regFragment"
+            app:destination="@id/regFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regFragment"
+        android:name="com.example.mad.RegFragment"
+        android:label="fragment_reg"
+        tools:layout="@layout/fragment_reg" />
+
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.mad.PhotoFragment"
+        android:label="PhotoFragment"
+        tools:layout="@layout/fragment_photo">
+        <action
+            android:id="@+id/action_photoFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="image_uri"
+            app:argType="android.net.Uri"/>
+    </fragment>
+
+
+</navigation>
